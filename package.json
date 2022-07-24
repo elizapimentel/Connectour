@@ -12,6 +12,7 @@
   "author": "Eliza Pimentel",
   "license": "ISC",
   "dependencies": {
+    "accesscontrol": "^2.2.1",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
