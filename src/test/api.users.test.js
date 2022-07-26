@@ -23,5 +23,19 @@ describe("API Connectour user test", () => {
                 return done()
             })
     })
+    it("Login /user/login", (done) => {
+        request(app)
+            .post("/user/login")
+            .expect("Content-type", /json/)
+            .send({
+                userName: "leticia",
+                password: "2323"
+            })
+            .expect(200)
+            .end((err, res) => {
+                if(err) return done(err)
+                return done()
+            })
+    })
     
 })
