@@ -2,6 +2,9 @@ const PostSchema = require('../models/postSchema');
 
 const creatPost = async (req, res) => {
     const { city, attractionName, opening_hours, address, description } = req.body;
+    if(!opening_hours) {
+        return res.status(405).send({message: "all items must be fill in"})
+    }
     try {
         const newPost = new PostSchema ({ city, attractionName, address, description, opening_hours, createdAt: new Date().toLocaleDateString() });
         await newPost.save();
