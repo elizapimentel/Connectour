@@ -14,7 +14,7 @@ ac.grant("user")
 ac.grant("admin")
 .extend("user")
 .resource("profile")
-.readAny()
+.readAny("profile", ["*", "!password"])
 .createAny()
 .updateAny("profile", ["*", "!password"]) //not working
 .deleteAny()
