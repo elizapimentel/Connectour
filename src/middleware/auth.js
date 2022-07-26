@@ -1,22 +1,31 @@
-const jwt = require('jsonwebtoken');
-const SECRET = process.env.SECRET;
-
-exports.checkAuth = (req, res, next) => {
-    const authHeader = req.get('Authorization');
-    const token = authHeader.split(' ')[1];
-
-    if(!token) {
-        return res.status(401).send('Header error')
-    }
-
+const { roles } = require('./roles')
+ 
+exports.grantAccess = function(action, resource) {
+ return async (req, res, next) => {
+  try {
+   const permission = roles.can(req.user.role)[action](resource);
+   if (!permission.granted) {
+    return res.status(401).json({
+     error: "You don't have enough permission to perform this action"
+    });
+   }
+   next();
+  } catch (error) {
+   res.status(401).send(error);
+  }
+ }
+}
+ 
+exports.allowIfLoggedin = async (req, res, next) => {
     try {
-        jwt.verify(token, SECRET, (err) => {
-            if(err) {
-                return res.status(401).send('unauthorized')
-            }
-        });
-        next()
-    } catch (error) {
-        console.error(error)        
-    }
+        const user = res.locals.loggedInUser;
+        if (!user)
+        return res.status(401).json({
+            error: "You need to be logged in to access this route"
+            });
+            req.user = user;
+            next();
+  } catch (error) {
+    res.status(405).send(error);
+  }
 }
