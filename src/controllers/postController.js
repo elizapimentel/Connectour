@@ -47,16 +47,20 @@ const updatePost = async (req, res) => {
         res.status(404).send({ message: message.error })
     }
 }
-//add try/catch
+
 const deletePost = async (req, res) => {
-    const post = await PostSchema.findByIdAndDelete(req.params.id)
-    if(!post) {
-        return res.status(404).send({ message: "Post not found"})
+    try {
+        const post = await PostSchema.findByIdAndDelete(req.params.id)
+        if(!post) {
+            return res.status(404).send({ message: "Post not found"})
+        }
+        res.status(200).send({
+            "message": "Post deleted",
+            "post": post
+        })        
+    } catch (error) {
+        res.status(404).send({message: message.error})
     }
-    res.status(200).send({
-        "message": "Post deleted",
-        "post": post
-    })
 }
 
 module.exports = {
