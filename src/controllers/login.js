@@ -1,35 +1,34 @@
 const UserSchema = require('../models/usersSchema')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
 const SECRET = process.env.SECRET
 
 const login = (req, res) => {
     try {
-        UserSchema.findOne({ userName: req.body.userName }, (error, user) => {
+        const { userName, password } = req.body
+        UserSchema.findOne({ userName }, (err, user) => {
             if(!user) {
                 return res.status(401).send({
                     message: "User not found",
-                    userName: `${req.body.userName}`
+                    userName: `${ userName }`
                 })
             }
-            const validPassword = bcrypt.compareSync(req.body.password, user.password)
+            const validPassword = bcrypt.compareSync(password, user.password)
             if(!validPassword) {
                 return res.status(401).send({
                     message: "Login unauthorized!",
-                    userName: `${req.body.userName}`
+                    userName: `${ userName }`
                 })
             }
-            if(user.role === 'admin') {
-                const token = jwt.sign({ userName: user.userName }, SECRET)
-                res.status(200).send({
+                const token = jwt.sign({ userId: user._id }, SECRET, {
+                    expiresIn: '1d'
+                })
+                UserSchema.findByIdAndUpdate(user._id, { token })
+                res.status(200).json({
                     "message": "Login successfully completed",
+                    user,
                     token
                 })
-            }
-            res.status(200).send({
-                "message": "Login successfully completed"
-        })
     })
     } catch (error) {
         console.error(error)
