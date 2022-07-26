@@ -22,6 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
+        default: 'user',
         enum: ['admin', 'user'],
         required: true
     },
@@ -34,6 +35,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true
+    },
+    accessToken: {
+        type: String
     },
     createdAt: {
         type: String,
