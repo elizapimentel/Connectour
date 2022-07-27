@@ -27,9 +27,7 @@ const getByName = async (req, res) => {
     const { city, attractionName } = req.query
     let query = {}
     if(city) query.city = new RegExp(city, 'i')
-    if(attractionName) query.attractionName = new RegExp(attractionName, 'i')   
-    if(attractionName) query.attractionName = new RegExp(attractionName, 'i')
-   
+    if(attractionName) query.attractionName = new RegExp(attractionName, 'i')     
     try {
         const searchByAttractionName = await PostSchema.find(query)
         res.status(200).json(searchByAttractionName)
