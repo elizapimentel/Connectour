@@ -1,20 +1,23 @@
 const request = require('supertest');
 const app = require('../app');
+const bcrypt = require('bcrypt');
 
+let token;
 let elementId;
+
 describe("API Connectour user test", () => {
     it("POST /user/signup", (done) => {
         request(app)
             .post("/user/signup")
             .expect("Content-Type", /json/)
             .send({
-                name: "Leticia",
+                name: "Maria",
                 surname: "Silva",
-                userName: "leticia", 
+                userName: "maria", 
                 county: "Recife", 
-                role: "user", 
-                registrationNumber: 44555, 
-                password: "2323"
+                role: "admin", 
+                registrationNumber: 55663, 
+                password: "2222"
             })
             .expect(201)
             .end((err, res) => {
@@ -28,10 +31,24 @@ describe("API Connectour user test", () => {
             .post("/user/login")
             .expect("Content-type", /json/)
             .send({
-                userName: "leticia",
-                password: "2323"
+                userName: "maria",
+                password: "2222"
             })
             .expect(200)
+            .end((err, res) => {
+                if(err) return done(err)
+                token = res.body.token
+                return done()
+            })
+    })
+    it("GET /user/all", (done) => {
+        request(app)
+            .get("/user/all")
+            .set("x-access-token", `${token}`)
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).not.toBe(0)
+            })
             .end((err, res) => {
                 if(err) return done(err)
                 return done()
