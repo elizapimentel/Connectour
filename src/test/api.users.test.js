@@ -10,12 +10,12 @@ describe("API Connectour test user - admin", () => {
             .post("/user/signup")
             .expect("Content-Type", /json/)
             .send({
-                name: "Maria",
-                surname: "Silva",
-                userName: "maria", 
+                name: "Marta",
+                surname: "Assis",
+                userName: "martaassis", 
                 county: "Recife", 
                 role: "admin", 
-                registrationNumber: 55663, 
+                registrationNumber: 55254, 
                 password: "2222"
             })
             .expect(201)
@@ -31,7 +31,7 @@ describe("API Connectour test user - admin", () => {
             .post("/user/login")
             .expect("Content-type", /json/)
             .send({
-                userName: "maria",
+                userName: "martaassis",
                 password: "2222"
             })
             .expect(200)
@@ -54,13 +54,19 @@ describe("API Connectour test user - admin", () => {
                 return done()
             })
     })
-    it("GET /user/regnumber", (done) => {
+    it("PUT /user/update/:id", (done) => {
         request(app)
-            .get("/user/regnumber")
+            .put(`/user/update/${elementId}`)
             .set("x-access-token", `${token}`)
-            .expect(200)
+            .expect("Content-Type", /json/)
+            .send({
+                name: "Marta Maria",
+            })
+            .expect(200)    
             .expect((res) => {
-                expect(res.body.length).not.toBe(0)
+                expect(res.body.savedUser._id).toBe(elementId)
+                expect(res.body.savedUser.name).toBe("Marta Maria")
+                
             })
             .end((err, res) => {
                 if(err) return done(err)
