@@ -44,11 +44,28 @@ const getByRegister = async (req, res) => {
         res.status(404).send(error)
     }
 }
-//add try/catch
+
 const updateUser = async (req, res) => {
-    const { name, surname, userName, county } = req.body
-    const user = await UserSchema.findByIdAndUpdate(req.params.id, { name, surname, userName, county }, { new: true }).select('-password')
-    res.status(200).send(user);
+    const { name, surname, userName, role, county } = req.body
+    try {
+        const user = await UserSchema.findById(req.params.id)
+        if(!user) {
+            return res.status(404).json({ message: "User not found!" })
+        }
+        user.name = name || user.name
+        user.surname = surname || user.surname
+        user.userName = userName || user.userName
+        user.role = role || user.role
+        user.county = county || user.county
+
+        const savedUser = await user.save()
+        res.status(200).json({
+            message: "User profile updated",
+            savedUser
+        })
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
 }
 //add try/catch
 const updatePassword = async (req, res) => {
