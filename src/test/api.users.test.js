@@ -1,11 +1,10 @@
 const request = require('supertest');
 const app = require('../app');
-const bcrypt = require('bcrypt');
 
 let token;
 let elementId;
 
-describe("API Connectour user test", () => {
+describe("API Connectour test user - admin", () => {
     it("POST /user/signup", (done) => {
         request(app)
             .post("/user/signup")
@@ -23,6 +22,7 @@ describe("API Connectour user test", () => {
             .end((err, res) => {
                 if(err) return done(err)
                 elementId = res.body._id
+                token = res.body.token
                 return done()
             })
     })
@@ -54,5 +54,17 @@ describe("API Connectour user test", () => {
                 return done()
             })
     })
-    
+    it("GET /user/regnumber", (done) => {
+        request(app)
+            .get("/user/regnumber")
+            .set("x-access-token", `${token}`)
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).not.toBe(0)
+            })
+            .end((err, res) => {
+                if(err) return done(err)
+                return done()
+            })
+    })
 })
