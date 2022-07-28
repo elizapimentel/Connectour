@@ -75,5 +75,24 @@ describe("API Connectour test user - admin", () => {
                 return done()
             })
     })
-    
+    it("PUT /user/updatePassword/:id", (done) => {
+        request(app)
+            .put(`/user/updatePassword/${elementId}`)
+            .set("x-access-token", `${token}`)
+            .expect("Content-Type", /json/)
+            .send({
+                password: "3333",
+            })
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.newPwd._id).toBe(elementId)
+                expect(res.body.newPwd.password).toBeDefined()
+                //fix it later
+            })
+            .end((err, res) => {
+                if(err) return done(err)
+                return done()
+            })
+    })
+
 })
