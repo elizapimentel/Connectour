@@ -80,29 +80,33 @@ const updatePassword = async (req, res) => {
         if(!user) {
             return res.status(404).send({ message: "User not found" })
         }
-        
         const newHashedPassword = bcrypt.hashSync(req.body.password, 10);
         req.body.password = newHashedPassword      
-        user.password = req.body.password
-    
-        await user.save()
+        user.password = req.body.password    
+        const newPwd = await user.save()
         res.status(200).send({
-            "message": "Password updated"
+            message: "Password updated",
+            newPwd
         })        
     } catch (error) {
         res.status(500).json({message: error.message})
     }
 }
-//add try/catch
+
 const deleteUser = async (req, res) => {
-    const user = await UserSchema.findByIdAndDelete(req.params.id)
-    if(!user) {
-        return res.status(404).send({ message: "User not found" })
+    try {
+        const user = await UserSchema.findByIdAndDelete(req.params.id)
+        if(!user) {
+            return res.status(404).send({ message: "User not found" })
+        }
+        const userDeleted = await user.remove()
+        res.status(200).json({
+            message: "User deleted",
+            userDeleted
+        })
+    } catch (error) {
+        res.status(500).json({message: error.message})
     }
-    res.status(200).send({
-        "message": "User deleted",
-        "user": user
-    })
 }
 
 module.exports = {
