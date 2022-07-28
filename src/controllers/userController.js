@@ -58,6 +58,12 @@ const updateUser = async (req, res) => {
         user.role = role || user.role
         user.county = county || user.county
 
+        const userExists = await UserSchema.exists({ userName: req.body.userName })
+        if(userExists) {
+            res.status(405).json({
+                message: "User name already exists",
+            })
+        }        
         const savedUser = await user.save()
         res.status(200).json({
             message: "User profile updated",
@@ -74,7 +80,7 @@ const updatePassword = async (req, res) => {
         if(!user) {
             return res.status(404).send({ message: "User not found" })
         }
-        const userName = await UserSchema.findOne({ userName })
+        
         const newHashedPassword = bcrypt.hashSync(req.body.password, 10);
         req.body.password = newHashedPassword      
         user.password = req.body.password
