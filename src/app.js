@@ -10,6 +10,7 @@ const db = require('./config/mongoConfig');
 const usersSchema = require('./models/usersSchema');
 const userRoutes = require('./routes/userRouter');
 const postRoutes = require('./routes/postRouter');
+const indexRoutes = require('./routes/indexRouter')
 
 db.connect();
 
@@ -32,5 +33,6 @@ app.use(async (req, res, next) => {
 
 app.use("/user", userRoutes);
 app.use("/post", postRoutes);
+app.use("/", indexRoutes);
 
 module.exports = app;
