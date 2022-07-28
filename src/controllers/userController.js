@@ -22,7 +22,7 @@ const signUp = async (req, res) => {
         newUser.token = token
         await newUser.save()
         res.status(201).json({
-            User: newUser,
+            newUser,
             token
         });
     } catch (error) {
@@ -67,20 +67,25 @@ const updateUser = async (req, res) => {
         res.status(500).json({message: error.message})
     }
 }
-//add try/catch
-const updatePassword = async (req, res) => {
-    const user = await UserSchema.findById(req.params.id)
-    if(!user) {
-        return res.status(404).send({ message: "User not found" })
-    }
-    const newHashedPassword = bcrypt.hashSync(req.body.password, 10);
-    req.body.password = newHashedPassword      
-    user.password = req.body.password
 
-    await user.save()
-    res.status(200).send({
-        "message": "Password updated"
-    })
+const updatePassword = async (req, res) => {
+    try {
+        const user = await UserSchema.findById(req.params.id)
+        if(!user) {
+            return res.status(404).send({ message: "User not found" })
+        }
+        const userName = await UserSchema.findOne({ userName })
+        const newHashedPassword = bcrypt.hashSync(req.body.password, 10);
+        req.body.password = newHashedPassword      
+        user.password = req.body.password
+    
+        await user.save()
+        res.status(200).send({
+            "message": "Password updated"
+        })        
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
 }
 //add try/catch
 const deleteUser = async (req, res) => {
