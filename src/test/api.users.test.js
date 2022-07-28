@@ -4,6 +4,9 @@ const app = require('../app');
 let token;
 let elementId;
 
+const registrationNumberMock = parseInt(Math.random() * 100000)
+const userNameMock = Math.random().toString(16)
+
 describe("API Connectour test user - admin", () => {
     it("POST /user/signup", (done) => {
         request(app)
@@ -12,16 +15,16 @@ describe("API Connectour test user - admin", () => {
             .send({
                 name: "Marta",
                 surname: "Assis",
-                userName: "martaassis", 
+                userName: userNameMock, 
                 county: "Recife", 
                 role: "admin", 
-                registrationNumber: 55254, 
-                password: "2222"
+                registrationNumber: registrationNumberMock, 
+                password: "1111"
             })
             .expect(201)
             .end((err, res) => {
                 if(err) return done(err)
-                elementId = res.body._id
+                elementId = res.body.newUser._id
                 token = res.body.token
                 return done()
             })
@@ -65,12 +68,12 @@ describe("API Connectour test user - admin", () => {
             .expect(200)    
             .expect((res) => {
                 expect(res.body.savedUser._id).toBe(elementId)
-                expect(res.body.savedUser.name).toBe("Marta Maria")
-                
+                expect(res.body.savedUser.name).toBe("Marta Maria")                
             })
             .end((err, res) => {
                 if(err) return done(err)
                 return done()
             })
     })
+    
 })
