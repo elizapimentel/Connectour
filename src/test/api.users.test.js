@@ -94,5 +94,20 @@ describe("API Connectour test user - admin", () => {
                 return done()
             })
     })
+    it("DELETE /user/delete/:id", (done) => {
+        request(app)
+            .delete(`/user/delete/${elementId}`)
+            .set("x-access-token", `${token}`)
+            .expect("Content-Type", /json/)
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.userDeleted._id).toBe(elementId)
+            })
+            .end((err, res) => {
+                if(err) return done(err)
+                return done()
+            })
+
+    })
 
 })
