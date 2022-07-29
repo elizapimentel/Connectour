@@ -1,6 +1,3 @@
-
-<div align="center" > <img src="https://forthebadge.com/images/badges/built-for-android.svg" alt="Grunt status"  height="25"> </div>
-
 <br>
 
 ## <div align="center" > [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&color=3D36F7&background=7BFF7200&lines=Connectour)](https://git.io/typing-svg) [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=25&color=3D36F7&background=7BFF7200&lines=quebrando+barreiras)](https://git.io/typing-svg) </div>
