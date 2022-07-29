@@ -155,10 +155,13 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center">
 
-<img src="./assets/createUser.gif" width= "100%" >
+<img alt="criando usuári postman" src="./assets/createUser.gif" width= "100%" >
 
 </div>
 
+
+
+</div>
 <br>
 
 ## 🎲 **Dados para cadastro de atrativos**
@@ -179,10 +182,13 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div >
 
-<img alt="postman criando usuario" src="./assets/create_post.gif" width="100%" />
+<img alt="criando postagem postman" src="./assets/create_post.gif" width="100%" />
 
 </div>
 
+
+
+</div>
 <br>
 
 ## 📚 Documentação da API
