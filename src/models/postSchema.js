@@ -10,17 +10,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    opening_hours: 
-    {   type: String,
-        required: true
-    [{
-        type: String,
-        required: true,
+    opening_hours: [{
         days: String,
         starts: Date.parse(),
         ends: Date.parse()
     }],
-},
     address: {
         type: String,
         required: true
