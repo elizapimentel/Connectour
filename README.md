@@ -1,3 +1,7 @@
+### <div align="center"> **Projeto Final Todas em Tech - { Reprograma }** </div>
+
+<br>
+
 <div align="center">
 
 <img  src="./assets/imag1.gif" width="400" style="border-radius:50%;"/>
@@ -6,13 +10,9 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=25&color=3D36F7&background=7BFF7200&lines=quebrando+divisas)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=25&color=3D36F7&background=7BFF7200&lines=conectando+divisas)](https://git.io/typing-svg)
 
 </div>
-
-
-### <div align="center"> Projeto Final - { Reprograma } </div>
-
 
 <br>
 
@@ -30,7 +30,7 @@ A API Connectour, refere-se ao meu projeto final do Bootcamp Backend Todas em Te
 
 <p align="justify"> Desta vivência, verifiquei que um grande entrave para os funcionários dos Centros de Atendimento ao Turista (CAT) é a comunicação com outros funcionários de outros municípios e o acesso à informações atualizadas e seguras de funcionamento e, as vezes até, da existência de seus atrativos turísticos. Dificuldade esta que prejudica tanto na qualidade do atendimento, quanto na geração de renda para o Estado, pois através da qualidade e precisão das informações que o turista recebe mais tempo ele irá se dispor a permancer no local e/ou voltar para conhecer melhor outras regiões do Estado.
 
-Esta dificuldade de acesso à informações inter-municipais acontece na maioria dos Estados brasileiros. </p>
+Esta dificuldade de acesso à informações intermunicipais acontece na maioria dos Estados brasileiros. </p>
 
 ### _Solução_
 
@@ -151,9 +151,9 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 ```
 
-## ↩️ Como a API irá retornar
+## ▶️ Como a API irá retornar
 
-add video/gif
+<img src="./assets/create_user.gif">
 
 <br>
 
@@ -171,15 +171,15 @@ add video/gif
 ```
 <br>
 
-## ↩️ Como a API irá retornar
+## ▶️ Como a API irá retornar
 
-add video/gif
+<img src="./assets/create_post.gif" >
 
 <br>
 
 ## 📚 Documentação da API
 
-Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Postman](https://documenter.getpostman.com/view/20977005/UzXRRvEB)
+Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Postman](https://documenter.getpostman.com/view/20977005/UzXRRvEB#intro)
 
 <br>
 
@@ -263,11 +263,10 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 ### Acesse na sua máquina através deste link:
 <br>
 
-<div align="center">
-<a  href="https://connectour.herokuapp.com/">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" width="40" height="40" />
+<a href="https://connectour.herokuapp.com/">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" width="40" height="40"/>
 </a>
-</div>
+
 <br>
 
 ### Ou siga este passo a passo:
@@ -300,7 +299,10 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 ## 💞 Agradecimentos
 <br>
 
-
+<div align="justify">
+<p> Gostaria de agradecer a todas essas mulheres maravilhosas que fazem a Reprograma acontecer e que lutam para que tenhamos uma sociedade mais justa e igualitária. </p>
+<p> Agradeço também pelas mulheres que, junto comigo, enfrentaram seus medos e inseguranças e aprenderam o poder da união e também de sermos individuais. #on15forever ❤️ </p>
+</dev>
 <br>
 
 ## 👩🏽‍💻 Desenvolvedora
@@ -316,7 +318,9 @@ Contatos: <div align = "justify">
 [![Outlook](https://img.shields.io/badge/elizapimentel@hotmail.com-0078D4?style=flat-for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:elizapimentel@hotmail.com)
 [![Linkedin Badge](https://img.shields.io/badge/-ElizaPimentel-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/eliza-pimentel)](https://www.linkedin.com/in/eliza-pimentel) 
 
-
+<br>
+<br>
+<br>
 
 <div align="center">
 
