@@ -155,7 +155,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center">
 
-<img alt="criando usuári postman" src="./assets/createUser.gif" width= "100%" >
+<img alt="criando usuári postman" src="./assets/createUser.gif">
 
 </div>
 
@@ -180,9 +180,9 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 ## ▶️ Como a API irá retornar
 
-<div >
+<div align="center" >
 
-<img alt="criando postagem postman" src="./assets/create_post.gif" width="100%" />
+<img alt="criando postagem postman" src="./assets/create_post.gif" />
 
 </div>
 
