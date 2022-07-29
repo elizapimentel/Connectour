@@ -153,7 +153,11 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 ## ▶️ Como a API irá retornar
 
-<img src="./assets/create_user.gif">
+<div align="center">
+
+<img src="./assets/createUser.gif" width= "100%" >
+
+</div>
 
 <br>
 
@@ -173,7 +177,11 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 ## ▶️ Como a API irá retornar
 
-<img src="./assets/create_post.gif" >
+<div >
+
+<img alt="postman criando usuario" src="./assets/create_post.gif" width="100%" />
+
+</div>
 
 <br>
 
@@ -267,6 +275,10 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" width="40" height="40"/>
 </a>
 
+e em seguida copie no  
+
+[![](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/) 
+
 <br>
 
 ### Ou siga este passo a passo:
@@ -286,6 +298,7 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 - [ ] Realizar teste da controller do post;
 - [ ] Adicionar impedimento na repetição de senha em sua atualização;
 - [ ] Adaptar a API para que possa ser utilizada por outros orgãos;
+- [ ] Adicionar segmento de atrativo a ser cadastrado e pesquisa por segmento/descrição
 
 <br>
 
