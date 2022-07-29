@@ -1,5 +1,8 @@
+<div align="center">
 
-<img align="center" src="./assets/imag1.gif" width="400" style="border-radius:50%;"/>
+<img  src="./assets/imag1.gif" width="400" style="border-radius:50%;"/>
+
+</div>
 
 <div align="center">
 
@@ -259,10 +262,12 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 
 ### Acesse na sua máquina através deste link:
 <br>
-<a href="https://connectour.herokuapp.com/">
+
+<div align="center">
+<a  href="https://connectour.herokuapp.com/">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" width="40" height="40" />
 </a>
-
+</div>
 <br>
 
 ### Ou siga este passo a passo:
