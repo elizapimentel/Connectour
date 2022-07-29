@@ -155,7 +155,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center">
 
-<img alt="criando usuári postman" src="./assets/createUser.gif">
+<img alt="criando usuári postman" src="./assets/createUser.gif" width="500">
 
 </div>
 
@@ -182,7 +182,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center" >
 
-<img alt="criando postagem postman" src="./assets/create_post.gif" />
+<img alt="criando postagem postman" src="./assets/create_post.gif" width="500">
 
 </div>
 
