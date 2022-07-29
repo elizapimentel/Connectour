@@ -14,6 +14,33 @@
 
 </div>
 
+---
+
+## 📄 Sumário
+
+- [O Projeto](#💻-o-projeto)
+    - [Solução](#solução)
+- [Funcionalidades](#⚙️-funcionalidades)
+- [Arquitetura MVC](#📑-arquitetura-mvc)
+- [Rotas](#🛣️-rotas)
+    - [Métodos - Usuários](#métodos-postgetputdelete---usuários-user)
+    - [Métodos - Postagens](#métodos-postgetputdelete---postagens-post)
+- [Regras de Negócio](#📝-regras-de-negócio)
+- [Dados para cadastro - Usuários](#🎲-dados-para-cadastro-de-usuários-na-connectour)
+- [Dados para cadastro - Postagens](#🎲-dados-para-cadastro-de-atrativos)
+- [Documentação da API](#📚-documentação-da-api)
+- [Tecnologias Utilizadas](#🛠️-tecnologias-utilizadas)
+- [Banco de dados](#🏦-banco-de-dados)
+- [Dependências do Projeto](#⚙️-dependências-do-projeto)
+- [Dependências do Desenvolvimento](#⚙️-dependências-de-desenvolvimento)
+- [Instalação](#👩🏽‍💻-instalação)
+- [Testando a API](#🧪-testando-a-api-na-sua-máquina)
+- [Implementações Futuras](#🔮-implementações-futuras)
+- [Agradecimentos](#💞-agradecimentos)
+- [Contatos](#👩🏽‍💻-desenvolvedora)
+
+---
+
 <br>
 
 ## 💻 **O Projeto**
@@ -155,7 +182,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center">
 
-<img alt="criando usuári postman" src="./assets/createUser.gif" width="500">
+<img alt="criando usuári postman" src="./assets/createUser.gif" width="100%">
 
 </div>
 
@@ -182,7 +209,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <div align="center" >
 
-<img alt="criando postagem postman" src="./assets/create_post.gif" width="500">
+<img alt="criando postagem postman" src="./assets/create_post.gif" width="100%">
 
 </div>
 
