@@ -30,7 +30,6 @@ const signUp = async (req, res) => {
     }
 }
 
-//put try/catch
 const getAllUsers = async (req, res) => {
     const user = await UserSchema.find().select('-password')
     res.status(200).send(user);    
