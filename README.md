@@ -156,6 +156,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 <br>
 
 - [x] Só quem pode cadastrar, editar e deletar usuários são pessoas com acesso de *admin*.
+- [x] Só quem pode deletar postagens são pessoas com acesso de *admin*.
 - [x] Não será possível haver mais de um usuário com o mesmo número de registro (*regnumber*).
 - [x] Pessoas cadastradas como *user* poderão editar apenas suas senhas.
 - [x] Usuários com acesso *user* poderão criar e editar seus próprios *posts* e apenas ver os posts de outros usuários.
