@@ -18,32 +18,32 @@
 
 ## 📄 Sumário
 
-- [O Projeto](#o-projeto-💻)
+- [O Projeto](#o-projeto)
     - [Solução](#solução)
-- [Funcionalidades](#funcionalidades-⚙️)
-- [Arquitetura MVC](#arquitetura-mvc-📑)
+- [Funcionalidades](#funcionalidades)
+- [Arquitetura MVC](#arquitetura-mvc)
 - [Rotas](#rotas-🛣️)
     - [Métodos - Usuários](#métodos-postgetputdelete---usuários-user)
     - [Métodos - Postagens](#métodos-postgetputdelete---postagens-post)
-- [Regras de Negócio](#regras-de-negócio-📝)
-- [Dados para cadastro - Usuários](#dados-para-cadastro-de-usuários-🎲)
-- [Dados para cadastro - Postagens](#dados-para-cadastro-de-atrativos-🎲)
-- [Documentação da API](#documentação-da-api-📚)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas-🛠️)
-- [Banco de dados](#banco-de-dados-🏦)
-- [Dependências do Projeto](#dependências-do-projeto-⚙️)
-- [Dependências do Desenvolvimento](#dependências-de-desenvolvimento-⚙️)
-- [Instalação](#instalação-👩🏽‍💻)
-- [Testando a API](#testando-a-api-na-sua-máquina-🧪)
-- [Implementações Futuras](#implementações-futuras-🔮)
-- [Agradecimentos](#agradecimentos-💞)
-- [Contatos](#desenvolvedora-👩🏽‍💻)
+- [Regras de Negócio](#regras-de-negócio)
+- [Dados para cadastro - Usuários](#dados-para-cadastro-de-usuários)
+- [Dados para cadastro - Postagens](#dados-para-cadastro-de-atrativos)
+- [Documentação da API](#documentação-da-api)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Banco de dados](#banco-de-dados)
+- [Dependências do Projeto](#dependências-do-projeto)
+- [Dependências do Desenvolvimento](#dependências-de-desenvolvimento)
+- [Instalação](#instalação)
+- [Testando a API](#testando-a-api-na-sua-máquina)
+- [Implementações Futuras](#implementações-futuras)
+- [Agradecimentos](#agradecimentos)
+- [Contatos](#desenvolvedora)
 
 ---
 
 <br>
 
-## **O Projeto** 💻 
+## **O Projeto** 
 
 <br>
 
@@ -65,13 +65,13 @@ Esta dificuldade de acesso à informações intermunicipais acontece na maioria 
 
 <br> 
 
-### Apresentação
+### _Apresentação_
 
 [link](https://www.canva.com/design/DAFH1tL80nU/PSE8lgEV8qJxsulxelBVBA/view#1)
 
 <br>
 
-## **Funcionalidades** ⚙️ 
+## **Funcionalidades** 
 <br>
 
 - [x] Efetuar cadastro das equipes das Secretarias como administradores.
@@ -80,7 +80,7 @@ Esta dificuldade de acesso à informações intermunicipais acontece na maioria 
 
 <br> 
 
-## **Arquitetura MVC** 📑 
+## **Arquitetura MVC** 
 <br>
 
 ```
@@ -117,7 +117,7 @@ Esta dificuldade de acesso à informações intermunicipais acontece na maioria 
 ```
 <br>
 
-##  ROTAS 🛣️
+##  **Rotas** 
 <br>
 
 O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software Rest/Restful, utilizando os protocolos HTTP - POST, GET, PUT, DELETE - CRUD. 
@@ -158,7 +158,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 </div>
 <br>
 
-## **Regras de Negócio** 📝
+## **Regras de Negócio** 
 <br>
 
 - [x] Só quem pode cadastrar, editar e deletar usuários são pessoas com acesso de *admin*.
@@ -170,7 +170,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 <br>
 
-## **Dados para cadastro de usuários** 🎲
+## **Dados para cadastro de usuários**
 <br>
 
 ```javascript
@@ -185,7 +185,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 
 ```
 
-## Como a API irá retornar ▶️
+## **Como a API irá retornar**
 
 <div align="center">
 
@@ -198,7 +198,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 </div>
 <br>
 
-## **Dados para cadastro de atrativos** 🎲
+## **Dados para cadastro de atrativos** 
 <br>
 
 ```javascript
@@ -212,7 +212,7 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 ```
 <br>
 
-## Como a API irá retornar ▶️
+## **Como a API irá retornar** 
 
 <div align="center" >
 
@@ -225,13 +225,13 @@ O projeto foi estruturado seguindo modelo da estrura de Arquitetura de Software 
 </div>
 <br>
 
-## Documentação da API 📚
+## **Documentação da API** 
 
 Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Postman](https://documenter.getpostman.com/view/20977005/UzXRRvEB#intro)
 
 <br>
 
-## Tecnologias Utilizadas 🛠️
+## **Tecnologias Utilizadas** 
 <br>
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en/)
@@ -243,14 +243,14 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 
 <br>    
 
-## Banco de dados 🏦
+## **Banco de dados** 
 <br>
 
 ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 	
 <br>
 
-## Dependências do Projeto ⚙️
+## **Dependências do Projeto** 
 <br>
 
 - [Express](https://www.npmjs.com/package/express)   
@@ -264,7 +264,7 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 
 <br>
 
-## Dependências de Desenvolvimento ⚙️
+## **Dependências de Desenvolvimento**
 <br>
 
 - [Nodemon](https://www.npmjs.com/package/nodemon)  
@@ -273,7 +273,7 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
 
 <br>
 
-##  Instalação 👩🏽‍💻
+##  **Instalação** 
 <br>
 
 1. Entre na pasta onde você deseja clonar o repositório. Abra o **git** nela e digite: 
@@ -305,7 +305,7 @@ Para ver como resultam as pesquisas efetuadas no Postman, acesse esse link  [Pos
     ```
 <br>
 
-## Testando a API na sua máquina 🧪
+## **Testando a API na sua máquina**
 <br>
 
 ### Acesse na sua máquina através deste link:
@@ -332,7 +332,7 @@ e em seguida copie no
 
 <br>
 
-## Implementações futuras 🔮
+## **Implementações futuras** 
 
 - [ ] Modificar algumas autorizações de ações de admin e user;
 - [ ] Realizar teste da controller do post;
@@ -342,14 +342,14 @@ e em seguida copie no
 
 <br>
 
-## Licença ©️
+## **Licença**
 <br>
 
 ### Este projeto está sob a licença [MIT](./LICENSE).
 
 <br>
 
-## Agradecimentos 💞
+## **Agradecimentos** 
 <br>
 
 <div align="justify">
@@ -358,7 +358,7 @@ e em seguida copie no
 </dev>
 <br>
 
-## Desenvolvedora 👩🏽‍💻
+## **Desenvolvedora** 
 <br>
 
 <img align="justify" src="./assets/pic.jpeg" width="100px;"/>
